@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.zxw.toamin.widget.IconFontTextView
+                android:id="@+id/if_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_home"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/tab_icon_size" />
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y5"
+                android:text="首页"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/tab_text_size" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.zxw.toamin.widget.IconFontTextView
+                android:id="@+id/if_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_type"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/tab_icon_size" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y5"
+                android:text="分类"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/tab_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.zxw.toamin.widget.IconFontTextView
+                android:id="@+id/if_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_user"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/tab_icon_size" />
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:text="个人"
+                android:textColor="@color/color_main"
+                android:textSize="@dimen/tab_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
