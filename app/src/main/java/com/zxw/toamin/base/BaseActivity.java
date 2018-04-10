@@ -68,15 +68,15 @@ public abstract class BaseActivity<V, T extends BasePresenter<V>> extends AutoLa
 
     }
 
-    private void initView() {
+    public void initView() {
 
     }
 
-    private void initData() {
+    public void initData() {
 
     }
 
-    private void initListener() {
+    public void initListener() {
     }
 
     //显示提示框
