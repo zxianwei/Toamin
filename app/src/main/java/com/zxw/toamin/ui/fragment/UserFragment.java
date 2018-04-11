@@ -1,5 +1,6 @@
 package com.zxw.toamin.ui.fragment;
 
+import com.zxw.toamin.R;
 import com.zxw.toamin.base.BaseFragment;
 import com.zxw.toamin.base.BasePresenter;
 
@@ -15,6 +16,6 @@ public class UserFragment extends BaseFragment {
 
     @Override
     protected int provideContentViewId() {
-        return 0;
+        return R.layout.frag_user;
     }
 }

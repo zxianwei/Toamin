@@ -1,12 +1,18 @@
 package com.zxw.toamin.ui.fragment;
 
+
+import com.zxw.toamin.R;
 import com.zxw.toamin.base.BaseFragment;
 import com.zxw.toamin.base.BasePresenter;
+import com.zxw.toamin.ui.view.Homeview;
 
-public class HomeFragment extends BaseFragment{
+/**
+ *
+ */
+public class HomeFragment extends BaseFragment<Homeview>{
 
-    public static HomeFragment newInstance() {
-        return new HomeFragment();
+    public static TypeFragment newInstance() {
+        return new TypeFragment();
     }
 
     @Override
@@ -16,6 +22,6 @@ public class HomeFragment extends BaseFragment{
 
     @Override
     protected int provideContentViewId() {
-        return 0;
+        return R.layout.frag_home;
     }
 }

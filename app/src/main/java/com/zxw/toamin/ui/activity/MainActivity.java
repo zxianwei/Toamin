@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity  extends BaseActivity {
+public class MainActivity extends BaseActivity {
 
     ViewPager viewPager;
     IconFontTextView ifHome;
@@ -33,7 +33,7 @@ public class MainActivity  extends BaseActivity {
     TextView tvUser;
     LinearLayout llUser;
 
-    List<Fragment> mFragments=new ArrayList<>();
+    List<Fragment> mFragments = new ArrayList<>();
 
 
     @Override
@@ -49,17 +49,32 @@ public class MainActivity  extends BaseActivity {
 
     @Override
     public void initView() {
-        viewPager= (ViewPager) $(R.id.viewpager);
-        tvHome= (TextView) $(R.id.tv_home);
-        tvType= (TextView) $(R.id.tv_type);
-        tvUser= (TextView) $(R.id.tv_user);
-        llHome=(LinearLayout)$(R.id.ll_home);
-        llType=(LinearLayout)$(R.id.ll_type);
-        llUser=(LinearLayout)$(R.id.ll_user);
-        ifHome=(IconFontTextView)$(R.id.if_home);
-        ifType=(IconFontTextView)$(R.id.if_type);
-        ifUser=(IconFontTextView)$(R.id.if_user);
+        viewPager = (ViewPager) $(R.id.viewpager);
+        tvHome = (TextView) $(R.id.tv_home);
+        tvType = (TextView) $(R.id.tv_type);
+        tvUser = (TextView) $(R.id.tv_user);
+        llHome = (LinearLayout) $(R.id.ll_home);
+        llType = (LinearLayout) $(R.id.ll_type);
+        llUser = (LinearLayout) $(R.id.ll_user);
+        ifHome = (IconFontTextView) $(R.id.if_home);
+        ifType = (IconFontTextView) $(R.id.if_type);
+        ifUser = (IconFontTextView) $(R.id.if_user);
         setTabColor(ifHome, tvHome);
+        initViewpager();
+    }
+
+    private void setTabColor(IconFontTextView icon, TextView textView) {
+        ifHome.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
+        tvHome.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
+        ifType.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
+        tvType.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
+        ifUser.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
+        tvUser.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
+        icon.setTextColor(UIUtils.getColor(R.color.tab_sel_color));
+        textView.setTextColor(UIUtils.getColor(R.color.tab_sel_color));
+    }
+
+    private void initViewpager() {
         mFragments.add(HomeFragment.newInstance());
         mFragments.add(TypeFragment.newInstance());
         mFragments.add(UserFragment.newInstance());
@@ -93,7 +108,6 @@ public class MainActivity  extends BaseActivity {
 
             }
         });
-
     }
 
     public void onViewClicked(View view) {
@@ -111,17 +125,6 @@ public class MainActivity  extends BaseActivity {
                 setTabColor(ifUser, tvUser);
                 break;
         }
-    }
-
-    private void setTabColor(IconFontTextView icon, TextView textView) {
-        ifHome.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
-        tvHome.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
-        ifType.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
-        tvType.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
-        ifUser.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
-        tvUser.setTextColor(UIUtils.getColor(R.color.tab_nor_color));
-        icon.setTextColor(UIUtils.getColor(R.color.tab_sel_color));
-        textView.setTextColor(UIUtils.getColor(R.color.tab_sel_color));
     }
 
 
